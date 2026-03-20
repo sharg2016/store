@@ -1,0 +1,18 @@
+.sticker-shop-footer{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    width: 100vw;
+    justify-content: center;
+    gap: 4px;
+    background-color: #FFe4e1;
+}
+
+.sticker-shop-footer-heart{
+    color : red;
+}
+
+.sticker-shop-footer-link{
+    color : #4169e1;
+    text-decoration: none;
+}
