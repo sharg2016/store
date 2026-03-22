@@ -1,0 +1,30 @@
+.sticker-shop-page-title{
+    margin: 10px 0;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.sticker-shop-title-click{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 24px;
+     display: flex;
+    justify-content: center;
+    font-family: cursive;
+}
+
+.sticker-shop-title-simple{
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 32px;
+    font-family: cursive;
+
+}
+
+.sticker-shop-title-text{
+    font-weight: 300;
+    font-size: 16px;
+}
