@@ -1,24 +1,25 @@
-import React from 'react';
 import ProductCard from '../product-card/ProductCard';
-import productsData from '../../data/products'; // Import for type reference
+import type {Product} from '../product-card/ProductCard';
+import "./ProductListing.css";
 
-interface ProductListingProps {
-  products: typeof productsData[number][];
+interface ProductListingProps{
+  products : Product[];   
 }
 
-function ProductListing({products}: ProductListingProps) {
+const ProductListing : React.FC<ProductListingProps> = ({products}) => {
   return (
     <div className='sticker-shop-product-listing'>
         <div className='sticker-shop-listing-grid'>
-            {products.length>0 ?
+            {products.length>0 ? (
             products.map((product) => (
-                <ProductCard key={product.productid}  product={product} />
-            ))    
-        }
+                <ProductCard key={product.productId}  product={product} />
+            )
+            )): (
+            <p className='sticker-shop-listing-empty'> No products to show.</p> 
+        )}
         </div>
-
     </div>
   );
-};
+}
 
 export default ProductListing;

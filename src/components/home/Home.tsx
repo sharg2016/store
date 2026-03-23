@@ -1,7 +1,7 @@
-import React from 'react';
+import products from '../../data/products';
 import PageTitle from '../page-title/PageTitle';
-import "./Home.css";
 import ProductListing from '../product-listing/ProductListing';
+import "./Home.css";
 
 
 function Home() {

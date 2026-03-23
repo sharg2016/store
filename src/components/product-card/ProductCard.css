@@ -1,0 +1,77 @@
+.sticker-shop-product-card{
+    /* height:250px; */
+    width: 200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.sticker-shop-product-image-container{
+    height: 150px;
+}
+
+.sticker-shop-product-image{
+    height: 100%;
+    width: 100%;
+}
+
+.sticker-shop-product-details{
+    display: flex;    
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.sticker-shop-product-name{
+    font-size: 16px;
+    margin: 0px;
+}
+
+.sticker-shop-product-description{
+    font-size: 16px;
+    margin: 0;
+}
+
+.sticker-shop-product-price-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.sticker-shop-product-popularity{
+        font-size: 16px;
+}
+
+.sticker-shop-product-popularity svg{
+    color:orange;
+}
+
+.sticker-shop-product-price{
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.sticker-shop-product-price p{
+    margin: 0;
+}
+
+.sticker-shop-product-button-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 15px 10px 15px;
+}
+
+.sticker-shop-product-button-cart{
+     height: 20px;
+    width: 80px;
+    border-radius: 8px;
+
+}
+
+.sticker-shop-product-button-buy{
+    height: 20px;
+    width: 50px;
+    border-radius: 8px;
+}
