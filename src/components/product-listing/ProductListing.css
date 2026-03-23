@@ -1,0 +1,6 @@
+.sticker-shop-listing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 40px; /* space between cards */
+  margin-top: 20px;
+}

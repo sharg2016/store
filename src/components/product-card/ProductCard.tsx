@@ -1,41 +1,46 @@
-import React from 'react';
-import Price from '../price/Price';
+import { faFire } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "./ProductCard.css";
 
-interface Product {
+export  interface Product{
+  productId?: number;
   name?: string;
-  price?: string | number;
-  imageurl?: string;
-  description?: string;
+  description ?: string;
+  price?: number;
+  popularity ?: string;
+  imageUrl?: string;
 }
 
 interface ProductCardProps {
-  product: Product;
+  product : Product;
 }
 
-function ProductCard({product}: ProductCardProps) {
-  const handleCardClick = () => {
-    alert(`Product clicked: ${product.name || 'Unnamed product'} ($${product.price})`);
-  };
-
+const ProductCard: React.FC<ProductCardProps> =({product}) => {
   return (
-    <div className='sticker-shop-product-card' onClick={handleCardClick} style={{cursor: 'pointer'}}> 
-      <div className='sticker-shop-product-image-container'>
-          <img src={product.imageurl} alt={product.name} className='sticker-shop-product-image' />
+    <div className="sticker-shop-product-card">
+      <div className="sticker-shop-product-image-container">
+        <img src={product.imageUrl} alt={product.name} className="sticker-shop-product-image"/>
       </div>
-      <div className='sticker-shop-product-details'>
-        <p className='sticker-shop-product-name'> {product.name}</p>
-        <p className='sticker-shop-product-desc'> {product.description} </p>
-        <div className='sticker-shop-product-footer'>
-           <p className='sticker-shop-product-price'>
-            <Price currency="$" price={product.price ?? 0}/>
-             </p>
-
-             <button onClick={(e) => { e.stopPropagation(); alert(`Buy clicked for ${product.name}!`); }}>Buy</button>
+      <div className="sticker-shop-product-details">
+          <h2 className="sticker-shop-product-name"> {product.name} </h2>
+          <p className="sticker-shop-product-description"> {product.description} </p>
+      </div>
+      <div className="sticker-shop-product-price-container">
+        <div className="sticker-shop-product-popularity">
+          <FontAwesomeIcon icon={faFire} />
+          {product.popularity}
+        </div>
+        <div className="sticker-shop-product-price">
+           <p>USD</p>
+           {product.price}
         </div>
       </div>
+      <div className="sticker-shop-product-button-container">
+        <button className="sticker-shop-product-button-cart" onClick={(e)=> alert("added to cart")}>Add Cart</button>
+        <button className="sticker-shop-product-button-buy" onClick={(e)=>alert("button clicked")}> Buy </button>
+      </div>
     </div>
-
-  );
-};
+  )
+}
 
 export default ProductCard;
